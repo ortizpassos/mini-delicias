@@ -1,21 +1,19 @@
 <!-- Navbar -->
 <nav class="navbar navbar-dark navbar-custom shadow-sm py-3" role="navigation" aria-label="Menu principal">
-  <div class="container d-flex align-items-center gap-2">
-    <!-- Botão toggler à esquerda -->
-    <button class="navbar-toggler border-0 order-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-label="Abrir menu">
+  <div class="container d-flex align-items-center justify-content-between">
+    <!-- Brand à esquerda -->
+    <a class="navbar-brand fw-bold fs-4 text-white mb-0" href="#home" (click)="handleNavClick('home', $event)">MINI DELÍCIAS</a>
+    <!-- Navegação desktop -->
+    <ul class="navbar-nav d-none d-md-flex flex-row gap-3 mb-0">
+      <li class="nav-item"><a class="nav-link" href="#home" (click)="handleNavClick('home', $event)">Início</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ofertas" (click)="handleNavClick('ofertas', $event)">Pedido</a></li>
+      <li class="nav-item"><a class="nav-link" href="#cardapio" (click)="handleNavClick('cardapio', $event)">Ofertas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contato" (click)="handleNavClick('contato', $event)">Contato</a></li>
+    </ul>
+    <!-- Botão toggler à direita (mobile) -->
+    <button class="navbar-toggler border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-label="Abrir menu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Brand -->
-    <a class="navbar-brand fw-bold fs-4 text-white order-1 mb-0" href="#home">MINI DELÍCIAS</a>
-    <!-- Espaçador flex para alinhar brand ao centro em telas pequenas -->
-    <div class="flex-grow-1 d-md-none"></div>
-    <!-- Itens horizontais (desktop) -->
-    <ul class="navbar-nav ms-auto d-none d-md-flex gap-3">
-      <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ofertas">Pedido</a></li>
-      <li class="nav-item"><a class="nav-link" href="#cardapio">Ofertas</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-    </ul>
   </div>
 </nav>
 <!-- Offcanvas lateral esquerda -->
@@ -26,10 +24,10 @@
   </div>
   <div class="offcanvas-body d-flex flex-column justify-content-between py-0">
     <ul class="navbar-nav gap-2 py-3">
-      <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#home">Início</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#ofertas">Pedido</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#cardapio">Ofertas</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#contato">Contato</a></li>
+      <li class="nav-item"><a class="nav-link" href="#home" (click)="handleNavClick('home', $event)" data-bs-dismiss="offcanvas">Início</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ofertas" (click)="handleNavClick('ofertas', $event)" data-bs-dismiss="offcanvas">Pedido</a></li>
+      <li class="nav-item"><a class="nav-link" href="#cardapio" (click)="handleNavClick('cardapio', $event)" data-bs-dismiss="offcanvas">Ofertas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contato" (click)="handleNavClick('contato', $event)" data-bs-dismiss="offcanvas">Contato</a></li>
     </ul>
     <div class="pb-3 small text-center opacity-75">&copy; 2025</div>
   </div>

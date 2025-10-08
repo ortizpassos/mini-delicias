@@ -140,3 +140,5 @@ body {
 
 /* Improve focus accessibility */
 :focus-visible { outline: 3px solid #facc15; outline-offset: 2px; }
+
+html { scroll-behavior: smooth; }
