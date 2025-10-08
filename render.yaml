@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: mini-delicias
+    env: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist/mini-delicias
+    # Node version during build (optional if default suits you)
+    buildFilter:
+      paths:
+        - src/**
+        - package.json
+        - angular.json
+        - tsconfig.json
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public,max-age=31536000,immutable
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+    routes:
+      # SPA rewrite: all unmatched routes serve index.html for Angular router
+      - type: rewrite
+        source: /.*
+        destination: /index.html
+    autoDeploy: true
