@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff7ed; /* laranja claro */
+      color: #1f2937; /* cinza escuro */
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: #ea580c; /* bg-orange-600 */
+    }
+
+    .navbar-custom a.nav-link {
+      color: white;
+      transition: color 0.2s;
+    }
+    .navbar-custom a.nav-link:hover {
+      color: #facc15; /* hover text-yellow-200 */
+    }
+
+    /* Hero */
+    .hero-img {
+      height: 450px;
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.0); /* mais transparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+
+    .hero-title {
+      font-weight: 700;
+      font-size: 2.25rem; /* 4xl */
+    }
+    @media (min-width: 768px) {
+      .hero-title { font-size: 3rem; } /* 5xl */
+    }
+
+    .hero-text {
+      font-size: 1.125rem; /* lg */
+    }
+    @media (min-width: 768px) {
+      .hero-text { font-size: 1.25rem; } /* xl */
+    }
+
+    .btn-orange {
+      background-color: #ea580c;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      transition: background-color 0.3s;
+    }
+    .btn-orange:hover {
+      background-color: #c2410c;
+      color: white;
+    }
+
+    /* Cardápio */
+    .card-custom {
+      text-align: center;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card-custom:hover {
+      transform: scale(1.05);
+    }
+    .card-custom img {
+      height: 14rem; /* h-56 */
+      object-fit: cover;
+    }
+
+    .text-orange-600 { color: #ea580c !important; }
+    .text-orange-700 { color: #c2410c !important; }
+    .bg-orange-100 { background-color: #ffedd5 !important; }
+    .bg-green-500 { background-color: #22c55e !important; }
+    .bg-green-600 { background-color: #16a34a !important; }
+
+    /* Form */
+    .form-custom input, .form-custom textarea {
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .form-custom button {
+      border-radius: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ea580c;
+      color: white;
+    }

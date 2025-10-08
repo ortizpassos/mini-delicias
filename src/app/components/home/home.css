@@ -1,0 +1,33 @@
+/* Hero section styles */
+.hero-wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 450px;
+}
+
+.hero-figure { position: relative; }
+
+.hero-image {
+	height: 450px;
+	object-fit: cover;
+	opacity: .85;
+	filter: saturate(1.05);
+	transition: transform .8s ease, opacity .4s ease;
+	will-change: transform;
+}
+.hero-image:hover { transform: scale(1.015); }
+
+.hero-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 1rem 1.25rem;
+	max-width: 780px;
+}
+
+.hero-title { text-shadow: 0 4px 12px rgba(0,0,0,.45); }
+.hero-subtitle { text-shadow: 0 2px 8px rgba(0,0,0,.35); }
+
+/* Accessibility helper (Bootstrap provides visually-hidden, keep as fallback) */
+.visually-hidden { position: absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
