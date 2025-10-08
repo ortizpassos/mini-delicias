@@ -1,6 +1,21 @@
 <!-- Hero -->
-<section id="home" class="position-relative" role="banner">
-  <img src="https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg" class="hero-img" alt="Salgados diversos em bandeja">
+<section id="home" class="position-relative" role="banner" aria-label="Imagem destaque de salgados artesanais">
+  <picture class="d-block">
+    <!-- Large desktops: imagem mais larga e detalhada -->
+    <source media="(min-width: 1400px)" srcset="https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=1920 1920w, https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=1600 1600w" />
+    <!-- Desktops médios -->
+    <source media="(min-width: 992px)" srcset="https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=1400 1400w, https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=1200 1200w" />
+    <!-- Tablets -->
+    <source media="(min-width: 768px)" srcset="https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=992 992w, https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=820 820w" />
+    <!-- Mobile (default menor) -->
+    <img
+      ngSrc="https://voalzira.com/wp-content/uploads/2021/02/Banner-festa.jpg?w=768"
+      width="1920" height="450"
+      class="hero-img"
+      priority
+      fetchpriority="high"
+      alt="Bandeja de salgados variados em festa" />
+  </picture>
   <div class="hero-overlay">
     <h1 class="hero-title mb-3">Deliciosos Salgados Artesanais</h1>
     <p class="hero-text mb-4">Coxinhas, empadas, quibes e muito mais — feitos com amor e qualidade!</p>

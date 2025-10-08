@@ -7,15 +7,16 @@
 
 .hero-figure { position: relative; }
 
-.hero-image {
+.hero-image, .hero-img {
 	height: 450px;
 	object-fit: cover;
 	opacity: .85;
 	filter: saturate(1.05);
 	transition: transform .8s ease, opacity .4s ease;
 	will-change: transform;
+	width:100%;
 }
-.hero-image:hover { transform: scale(1.015); }
+.hero-image:hover, .hero-img:hover { transform: scale(1.015); }
 
 .hero-overlay {
 	position: absolute;
@@ -28,6 +29,14 @@
 
 .hero-title { text-shadow: 0 4px 12px rgba(0,0,0,.45); }
 .hero-subtitle { text-shadow: 0 2px 8px rgba(0,0,0,.35); }
+
+/* Mobile first adjustments */
+@media (max-width: 399px) { .hero-image, .hero-img { height: 300px; } }
+@media (min-width: 400px) and (max-width: 575.98px) { .hero-image, .hero-img { height: 340px; } }
+@media (min-width: 576px) and (max-width: 767.98px) { .hero-image, .hero-img { height: 380px; } }
+@media (min-width: 768px) and (max-width: 991.98px) { .hero-image, .hero-img { height: 420px; } }
+@media (min-width: 992px) and (max-width: 1399.98px) { .hero-image, .hero-img { height: 450px; } }
+@media (min-width: 1400px) { .hero-image, .hero-img { height: 520px; } }
 
 /* Accessibility helper (Bootstrap provides visually-hidden, keep as fallback) */
 .visually-hidden { position: absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
