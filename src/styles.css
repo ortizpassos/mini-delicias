@@ -110,6 +110,14 @@ body {
       color: white;
     }
 
+    /* Offcanvas custom */
+.offcanvas.offcanvas-start { width: 260px; background: linear-gradient(180deg,#ea580c 0%, #c2410c 100%); }
+.offcanvas .nav-link { color: #fff; font-weight: 500; }
+.offcanvas .nav-link:hover, .offcanvas .nav-link:focus { background-color: rgba(255,255,255,0.12); border-radius: .5rem; }
+.offcanvas .offcanvas-header { border-bottom: 1px solid rgba(255,255,255,0.25); }
+.navbar-toggler:focus-visible { outline: 3px solid #facc15; outline-offset: 2px; }
+@media (min-width: 768px) { .offcanvas { display: none; } }
+
     /* ---------------- Responsive Enhancements ---------------- */
 @media (max-width: 575.98px) {
   .hero-img { height: 320px; }
